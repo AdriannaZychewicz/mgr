@@ -86,6 +86,14 @@ def get_track_features(tid):
         print json.dumps(feature, indent=4)
     return features
 
+
+def get_track_analytics(tid):
+    analytics = sp.audio_analysis(tid)
+    print(json.dumps(analytics, indent=4))
+    # for feature in analytics:
+    #     print json.dumps(feature, indent=4)
+    return analytics
+
         # analysis = sp._get(feature['analysis_url'])
         # print(json.dumps(analysis, indent=4))
         # print()

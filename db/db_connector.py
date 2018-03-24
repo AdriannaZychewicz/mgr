@@ -27,7 +27,7 @@ class Meta(db.Entity):
 
 def init_db():
     # PostgreSQL bindings
-    db.bind(provider='postgres', user='postgres', password='', host='', database='')
+    db.bind(provider='postgres', user='mgr', password='a', host='localhost', port='5432', database='mgr_db')
     db.generate_mapping(create_tables=True)
     set_sql_debug(True)
 
